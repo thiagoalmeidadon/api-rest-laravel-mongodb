@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('usuario', 'UsuarioController@index');
+Route::get('/usuario', ['as'=>'exibe.usuario','uses'=>'UsuarioController@index']);
+Route::post('/usuario', ['as'=>'salva.usuario' ,'uses' => 'UsuarioController@salvar']);

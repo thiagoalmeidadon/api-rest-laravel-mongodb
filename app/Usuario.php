@@ -10,6 +10,6 @@ class Usuario extends Model
     protected $collection = 'usuarios';
     
     protected $fillable = [
-        'name', 'idade',
+        'nome', 'idade',
     ];
 }

@@ -14,7 +14,15 @@ class UsuarioController extends Controller
         
         return Usuario::all();
         	    
+    }
 
+    public function salvar(Request $request)
+    {
+    	$dados = $request->all();
+
+    	Usuario::create($dados);
+    	return redirect()->route('exibe.usuario');
+    	
     }
 
 
