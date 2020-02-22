@@ -25,6 +25,24 @@ class UsuarioController extends Controller
     	
     }
 
+    public function update(Request $request, $id)
+    {
+    	Usuario::find($id)->update($request->all());
+    	return $request->all();
+    }
+
+    public function delete(Request $request, $id)
+    {
+    	Usuario::find($id)->delete($request->all());
+    	return Usuario::all();
+    }
+
+
+    public function testando()
+    {
+    	return "testando só";
+    }
+
 
  
 
